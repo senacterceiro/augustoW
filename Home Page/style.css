@@ -202,7 +202,7 @@ body {
 .obra-a-negra {
     grid-column: 1 / span 2;
     grid-row: 1 / span 3;
-    z-index: 10; /* Para sobrepor */
+    z-index: 10; 
 }
 
 .obra-mosaico-1 {
@@ -213,5 +213,82 @@ body {
 .obra-mosaico-2 {
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
+}
+
+/* --- Rodapé Modernista --- */
+
+.rodape-modernista {
+    background-color: #4196d2;
+    color: var(--cor-fundo); 
+    padding-top: 50px;
+    font-size: 0.9em;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
+.rodape-coluna {
+    flex-basis: 30%; 
+}
+
+.rodape-coluna h4 {
+    color: var(--cor-amarelo); 
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 2px solid var(--cor-amarelo); 
+    padding-bottom: 5px;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+}
+
+.rodape-coluna li {
+    margin-bottom: 10px;
+}
+
+.rodape-coluna a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape-coluna a:hover {
+    color: black; 
+}
+
+
+.rodape-contato address {
+    font-style: normal; 
+    margin-bottom: 15px;
+}
+
+.rodape-contato p {
+    margin-bottom: 5px;
+}
+
+/* --- Barra de contato,etc --- */
+
+.rodape-direitos {
+    background-color: var(--cor-verde); 
+    color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.rodape-direitos p {
+    z-index: 2; 
+    font-weight: bold;
+    padding-left: 20px; 
 }
 
