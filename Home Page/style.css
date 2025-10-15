@@ -1,14 +1,14 @@
-/* Variáveis de Cores para facilitar a manutenção */
+
 :root {
     --cor-principal: #000;
     --cor-fundo: #fff;
-    --cor-azul: #4196d2; /* Aproximado do botão GALERIA DE OBRAS */
-    --cor-amarelo: #ffc90e; /* Aproximado do botão BIOGRAFIA */
-    --cor-verde: #86c440; /* Aproximado da seção EXPOSIÇÕES */
-    --cor-verde-claro: #dae8c7; /* Aproximado do calendário */
+    --cor-azul: #4196d2; 
+    --cor-amarelo: #ffc90e; 
+    --cor-verde: #ffc90e; 
+    --cor-verde-claro: #dae8c7; 
 }
 
-/* Reset básico e tipografia */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +16,13 @@
 }
 
 body {
-    font-family: sans-serif; /* Usando uma fonte simples como placeholder */
+    font-family: sans-serif; 
     background-color: var(--cor-fundo);
     color: var(--cor-principal);
     padding: 20px;
 }
 
-/* 1. Cabeçalho (Título Principal) */
+
 .header {
     text-align: left;
     margin-bottom: 40px;
@@ -30,7 +30,7 @@ body {
 }
 
 .header h1 {
-    font-size: 3em; /* Ajuste o tamanho da fonte conforme a imagem */
+    font-size: 3em; 
     font-weight: 900;
     letter-spacing: 0.1em;
 }
@@ -40,21 +40,21 @@ body {
     letter-spacing: 0.2em;
 }
 
-/* 2. Seção Principal (Layout de 2 colunas) */
+
 .secao-principal {
     display: flex;
-    gap: 30px; /* Espaço entre as colunas */
+    gap: 30px; 
 }
 
 .coluna-esquerda,
 .coluna-direita {
-    flex: 1; /* Faz as duas colunas terem larguras iguais */
+    flex: 1; 
 }
 
-/* --- Coluna Esquerda: Bloco de Destaque --- */
+
 
 .galeria-destaque {
-    position: relative; /* Para posicionar os círculos e miniaturas */
+    position: relative; 
     margin-bottom: 40px;
 }
 
@@ -64,25 +64,25 @@ body {
     display: block;
 }
 
-/* Stack de Miniaturas (Sobreposição) */
+
 .miniaturas-stack {
     position: absolute;
     top: 50%;
-    right: -10%; /* Move para fora da coluna principal */
+    right: -10%; 
     transform: translateY(-50%);
-    width: 25%; /* Largura total da pilha */
+    width: 25%; 
     z-index: 10;
 }
 
 .miniaturas-stack img {
     width: 100%;
     display: block;
-    margin-bottom: -40%; /* Sobreposição, ajuste a porcentagem para o efeito desejado */
-    border: 5px solid white; /* Borda branca entre as imagens */
+    margin-bottom: -40%; 
+    border: 5px solid white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Círculos Decorativos */
+
 .circulo-decorativo {
     width: 20px;
     height: 20px;
@@ -103,7 +103,7 @@ body {
     transform: translate(-50%, 50%);
 }
 
-/* --- Coluna Esquerda: Galeria de Obras e Filtro --- */
+
 .galeria-obras h2 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -141,12 +141,12 @@ body {
     line-height: 1.4;
 }
 
-/* --- Coluna Direita: Ruptura e Cor --- */
+
 .ruptura-cor {
     position: relative;
-    padding-left: 30px; /* Espaço para o círculo decorativo */
+    padding-left: 30px; 
     margin-bottom: 20px;
-    border-bottom: 2px solid var(--cor-principal); /* Linha horizontal */
+    border-bottom: 2px solid var(--cor-principal); 
     padding-bottom: 20px;
 }
 
@@ -180,15 +180,14 @@ body {
     background-color: var(--cor-amarelo);
 }
 
-/* --- Coluna Direita: Mosaico Secundário --- */
-/* O mosaico é a parte mais complexa. GRID ou Posicionamento Absoluto seriam usados */
+
 .mosaico-secundario {
     display: grid;
-    /* Defina um Grid para posicionar as imagens */
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-    grid-template-rows: repeat(4, 1fr); /* 4 linhas (aproximado) */
+  
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
     gap: 5px;
-    height: 60vh; /* Altura aproximada para o mosaico, ajuste conforme necessário */
+    height: 60vh; 
     position: relative;
 }
 
@@ -199,9 +198,6 @@ body {
     display: block;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* Posicionamento específico para simular o layout (usando Grid Area) */
-/* As classes obra-mosaico-X seriam mapeadas para o grid */
 
 .obra-a-negra {
     grid-column: 1 / span 2;
@@ -218,67 +214,4 @@ body {
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
 }
-/* ... e assim por diante para todas as imagens, ajustando as áreas */
 
-/* 3. Próximas Exposições (Rodapé) */
-.proximas-exposicoes {
-    background-color: var(--cor-verde-claro);
-    margin-top: 40px;
-    padding: 20px 0;
-}
-
-.titulo-exposicoes {
-    background-color: var(--cor-verde);
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    width: 90%; /* Largura menor que o total */
-    display: inline-block;
-}
-
-.titulo-exposicoes h3 {
-    color: var(--cor-fundo);
-    font-size: 1.5em;
-}
-
-.detalhe-exposicao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.texto-exposicao {
-    font-size: 0.9em;
-    line-height: 1.4;
-    max-width: 70%;
-}
-
-.texto-exposicao .sub-texto {
-    font-weight: bold;
-    font-size: 0.8em;
-}
-
-.botao-contato {
-    background-color: #c00; /* Cor vermelha para destaque */
-    color: var(--cor-fundo);
-    padding: 10px 25px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* DETALHE: Ícone de Calendário (Simulação) */
-/* O ícone de calendário seria um SVG ou Font Awesome, aqui simulo a posição */
-.detalhe-exposicao::before {
-    content: "\1F4C5"; /* Código Unicode para um calendário */
-    font-size: 1.5em;
-    color: var(--cor-verde);
-    /* Posicionamento específico para simular o ícone na caixa verde */
-    position: absolute;
-    right: 30px;
-    transform: translateY(-45px); /* Move para cima */
-    background-color: white;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid var(--cor-verde);
-}
