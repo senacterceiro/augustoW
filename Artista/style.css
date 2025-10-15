@@ -1,0 +1,130 @@
+
+:root {
+    --cor-principal: #000;
+    --cor-fundo: #fff;
+    --cor-verde: #86c440; 
+    --cor-verde-claro: #dae8c7; 
+    --cor-azul-claro: #008cff; /* Azul do quadrado decorativo */
+    --cor-amarelo-forte: #ffeb00; /* Amarelo do círculo decorativo */
+}
+
+
+.secao-biografia {
+    display: flex;
+    gap: 50px; 
+    margin-bottom: 40px;
+}
+
+.coluna-artista {
+    flex: 1.2; 
+}
+
+.coluna-biografia {
+    flex: 1;
+}
+
+.coluna-artista h2, .coluna-biografia h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+
+.grid-retratos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    gap: 5px;
+    position: relative;
+    height: 600px; 
+}
+
+.retrato {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.r1 { grid-area: 1 / 1 / 2 / 2; }
+.r2 { grid-area: 1 / 2 / 2 / 3; }
+.r3 { grid-area: 1 / 3 / 2 / 4; }
+.r4 { grid-area: 2 / 1 / 3 / 2; }
+.r5 { grid-area: 2 / 2 / 3 / 3; }
+.r6 { grid-area: 2 / 3 / 3 / 4; }
+
+
+.retrato-principal {
+    grid-area: 3 / 2 / 5 / 4; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5; 
+}
+
+
+.linha-decorativa {
+    position: absolute;
+    background-color: var(--cor-principal); 
+    z-index: 10;
+}
+.horizontal {
+    width: 100%;
+    height: 3px;
+    top: 339px; 
+}
+.vertical {
+    width: 4px;
+    height: 100%;
+    left: 33%; 
+}
+
+
+.fase-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fase-info h3 {
+    font-size: 3em;
+    font-weight: 1000;
+    line-height: 0;
+    margin-bottom: auto;
+    
+}
+
+.fase-info h4 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.elementos-decorativos {
+    display: flex;
+    gap: 25px;
+}
+
+.quadrado, .circulo {
+    width: 100px;
+    height: 100px;
+}
+
+.quadrado.azul {
+    background-color: var(--cor-azul-claro);
+}
+
+.circulo.amarelo {
+    background-color: var(--cor-amarelo-forte);
+    border-radius: 50%;
+}
+
+
+
+
+.coluna-biografia h3 {
+    font-size: 1.8em;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
